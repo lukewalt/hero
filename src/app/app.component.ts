@@ -18,6 +18,7 @@ const HEROES: Hero[] = [
   { id: 20, name: 'Tornado' }
 ];
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,5 +27,12 @@ const HEROES: Hero[] = [
 
 export class AppComponent {
   title = 'Tour of Heros';
+  //selecting logic
+  selectedHero: Hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+
+  //array of heroes
   heroes =  HEROES;
 }
