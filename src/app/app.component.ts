@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
 
-export class Hero {
-  id: number;
-  name: string;
-}
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `,
+  styleUrls: ['./app.component.css'],
 })
-
 export class AppComponent {
-  title = 'Tour of Heros';
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  }
+  title = 'Tour of Heroes';
 }
