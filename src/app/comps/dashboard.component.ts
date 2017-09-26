@@ -14,6 +14,7 @@ import { HeroService } from '../services/hero.service';
         </div>
       </a>
     </div>
+    <hero-search></hero-search>
   `,
   styleUrls: ['./dashboard.component.css']
 })
